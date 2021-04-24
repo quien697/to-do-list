@@ -1,7 +1,10 @@
 import React from 'react';
+/* PropTypes */
+import propTypes from 'prop-types';
+/* React-Bootstrap */
 import { InputGroup, FormControl, Button } from 'react-bootstrap';
 
-const AddTodo = ({ inputRef, onClick }) => {
+const AddTodo = ({ inputRef, handleAddTodo }) => {
     console.log("AddTodo");
     return (
         <InputGroup>
@@ -13,11 +16,16 @@ const AddTodo = ({ inputRef, onClick }) => {
             <InputGroup.Append>
                 <Button 
                     className="ml-3 rounded"
-                    onClick={onClick}
+                    onClick={handleAddTodo}
                 >新增</Button>
             </InputGroup.Append>
         </InputGroup>
     )
+}
+
+AddTodo.propTypes = {
+	inputRef: propTypes.object,
+    handleAddTodo: propTypes.func,
 }
 
 export default AddTodo;

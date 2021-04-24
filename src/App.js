@@ -47,11 +47,11 @@ const App = () => {
                 <Title value="To-Do List App" />
             </Row>
             <Row className="bg-white rounded shadow p-3 mb-5">
-                <AddTodo inputRef={inputRef} onClick={handleAddTodo} />
+                <AddTodo inputRef={inputRef} handleAddTodo={handleAddTodo} />
             </Row>
             <Row className="bg-white rounded shadow p-3 mb-5">
                 <Filter handleFilter={handleFilter} />
-                <TodoList todos={filterData(todos, filter)} onClick={handleToggleTodo} />
+                <TodoList todos={filterData(todos, filter)} handleToggleTodo={handleToggleTodo} />
             </Row>
         </Container>
     )

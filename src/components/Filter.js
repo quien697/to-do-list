@@ -1,4 +1,6 @@
 import React from 'react';
+/* PropTypes */
+import propTypes from 'prop-types';
 /* React-Bootstrap */
 import { Nav } from 'react-bootstrap';
 /* Constants */
@@ -14,5 +16,9 @@ const Filter = ({ handleFilter }) => {
         </Nav>
     );
 };
+
+Filter.propTypes = {
+    handleFilter: propTypes.func,
+}
 
 export default Filter;
