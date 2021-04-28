@@ -7,12 +7,4 @@
     - Bootstrap 4.6.0
     - React-Bootstrap 1.5.2
     - prop-types 15.7.2
-3. 使用 useSelector、useDispatch 來取代 connect、mapStateToProps、mapDispatchToProps。
-
-
-
-改成3版本
-
-舊
-hook
-react hook
+4. 使用 useSelector、useDispatch 來取代 connect、mapStateToProps、mapDispatchToProps。

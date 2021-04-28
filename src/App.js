@@ -25,7 +25,10 @@ const App = () => {
     // 
     const inputRef = useRef('');
     // OnClick
-    const handleAddTodo = () => dispatch(addTodo(inputRef.current.value));
+    const handleAddTodo = () => {
+        dispatch(addTodo(inputRef.current.value));
+        inputRef.current.value = '';
+    };
     const handleToggleTodo = (id) => dispatch(toggleTodo(id));
     const handleFilter = (filter) => dispatch(toggleFilter(filter));
     const filterData = (todos, filter) => {
@@ -43,7 +46,7 @@ const App = () => {
     
     return (
         <Container>
-            <Row>
+            <Row className="mt-5">
                 <Title value="To-Do List App" />
             </Row>
             <Row className="bg-white rounded shadow p-3 mb-5">
